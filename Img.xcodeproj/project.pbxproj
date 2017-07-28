@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F527C87B1F2B71930069BCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527C87A1F2B71930069BCFB /* AppDelegate.swift */; };
-		F527C87D1F2B71930069BCFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527C87C1F2B71930069BCFB /* ViewController.swift */; };
 		F527C8801F2B71930069BCFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F527C87E1F2B71930069BCFB /* Main.storyboard */; };
 		F527C8831F2B71940069BCFB /* Img.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F527C8811F2B71940069BCFB /* Img.xcdatamodeld */; };
 		F527C8851F2B71940069BCFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F527C8841F2B71940069BCFB /* Assets.xcassets */; };
 		F527C8881F2B71940069BCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F527C8861F2B71940069BCFB /* LaunchScreen.storyboard */; };
+		F527C8901F2B72710069BCFB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527C88F1F2B72710069BCFB /* TableViewController.swift */; };
+		F527C8921F2B74A20069BCFB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527C8911F2B74A20069BCFB /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F527C8771F2B71920069BCFB /* Img.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Img.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F527C87A1F2B71930069BCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F527C87C1F2B71930069BCFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F527C87F1F2B71930069BCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F527C8821F2B71940069BCFB /* Img.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Img.xcdatamodel; sourceTree = "<group>"; };
 		F527C8841F2B71940069BCFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F527C8871F2B71940069BCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F527C8891F2B71940069BCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F527C88F1F2B72710069BCFB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F527C8911F2B74A20069BCFB /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				F527C87A1F2B71930069BCFB /* AppDelegate.swift */,
-				F527C87C1F2B71930069BCFB /* ViewController.swift */,
 				F527C87E1F2B71930069BCFB /* Main.storyboard */,
+				F527C88F1F2B72710069BCFB /* TableViewController.swift */,
+				F527C8911F2B74A20069BCFB /* TableViewCell.swift */,
 				F527C8841F2B71940069BCFB /* Assets.xcassets */,
 				F527C8861F2B71940069BCFB /* LaunchScreen.storyboard */,
 				F527C8891F2B71940069BCFB /* Info.plist */,
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F527C87D1F2B71930069BCFB /* ViewController.swift in Sources */,
 				F527C87B1F2B71930069BCFB /* AppDelegate.swift in Sources */,
+				F527C8921F2B74A20069BCFB /* TableViewCell.swift in Sources */,
+				F527C8901F2B72710069BCFB /* TableViewController.swift in Sources */,
 				F527C8831F2B71940069BCFB /* Img.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
