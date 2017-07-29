@@ -38,6 +38,8 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
     func createPost(with image: UIImage) {
         let post = Post(context: context)
         post.photo = NSData(data: UIImageJPEGRepresentation(image, 0)!)
+        post.date = Date() as NSDate
+        print(post.date!)
         saveData()
         loadData()
     }
@@ -46,6 +48,7 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
         super.viewDidLoad()
             loadData()
         print(posts.count)
+        print("DIDLOAD")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,6 +56,7 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,6 +81,17 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
         if let img = posts[indexPath.row].photo {
             cell.img.image = UIImage(data: img as Data)
         }
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "MMM d, h:mm a"
+        
+        cell.date.isHidden = true
+        if let date = posts[indexPath.row].date {
+            cell.date.isHidden = false
+            cell.date.text = formatter.string(from: date as Date)
+        }
+        
         
         
         return cell
