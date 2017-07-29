@@ -60,6 +60,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Xr0-RZ-Yxs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Xkc-BD-TSj">
+                            <connections>
+                                <action selector="deleteAllData:" destination="616-I8-qKY" id="R5h-oT-qVM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CZg-yO-MhM">
                             <connections>
                                 <action selector="addPost:" destination="616-I8-qKY" id="kA4-Hd-BcO"/>

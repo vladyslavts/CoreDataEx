@@ -11,11 +11,26 @@ import CoreData
 
 class TableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    let context = AppDelegate.viewContext
+    let context = AppDelegate.context
     
     
     var posts = [Post]()
     
+    @IBAction func deleteAllData(_ sender: UIBarButtonItem) {
+        
+        let ReqVar = NSFetchRequest<NSFetchRequestResult>(entityName: "Post")
+        let DelAllReqVar = NSBatchDeleteRequest(fetchRequest: ReqVar)
+        do {
+            try context.execute(DelAllReqVar)
+        }
+        catch { print(error) }
+        
+        
+        
+        saveData()
+        //loadData()
+        
+    }
     @IBAction func addPost(_ sender: UIBarButtonItem) {
     
         let imgPicker = UIImagePickerController()
@@ -104,7 +119,7 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
             posts = try context.fetch(postsRequest)
             tableView.reloadData()
         } catch  {
-            print(error.localizedDescription)
+            print("LOADING ERROR: \(error.localizedDescription)")
         }
     }
     
@@ -113,7 +128,7 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
             try context.save()
             print("SAVED")
         } catch  {
-            print(error.localizedDescription)
+            print("SAVING ERROR: \(error.localizedDescription)")
         }
     }
 
