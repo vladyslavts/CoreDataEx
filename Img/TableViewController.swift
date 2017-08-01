@@ -31,6 +31,7 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
         //loadData()
         
     }
+    
     @IBAction func addPost(_ sender: UIBarButtonItem) {
     
         let imgPicker = UIImagePickerController()
@@ -57,6 +58,11 @@ class TableViewController: UITableViewController, UINavigationControllerDelegate
         print(post.date!)
         saveData()
         loadData()
+        
+        //var indexPath = IndexPath(forRow: posts.count, inSection: 0)
+        let path = IndexPath(row: posts.count - 1, section: 0)
+        self.tableView.scrollToRow(at: path,
+                                   at: .middle, animated: true)
     }
     
     override func viewDidLoad() {
